@@ -10,7 +10,7 @@ class weblogic::params {
   $weblogic_wls_rsp       = '/var/Oracle/install/wls.rsp'
   $oracle_user            = 'oracle'
   $oracle_group           = 'oinstall'
-  $weblogic_group_gid     = '610'
+  $oracle_group_gid     = '610'
   $oracle_inst_loc        = '/var/Oracle/install/oraInst.loc'
   $oracle_dir             = '/var/Oracle'
   $oracle_home            = '/var/Oracle/Middleware1212'
