@@ -19,7 +19,7 @@ class weblogic::params {
   $oracle_support_pwd     = ''
   $oracle_sec_uptd        = false
   $oracle_updt_myoracle   = false
-  $opt_dir                = '/opt/Oracle/'
+  $opt_dir                = '/opt/Oracle'
   $jdk_version            = ''
   $proxy_host             = ''
   $proxy_port             = ''
