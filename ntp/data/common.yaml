@@ -1,0 +1,11 @@
+# ntp/data/common.yaml
+---
+ntp::autoupdate: false
+ntp::service_name: ntpd
+
+# ntp/data/os/AIX.yaml
+---
+ntp::service_name: xntpd
+
+# ntp/data/os/Debian.yaml
+ntp::service_name: ntp
