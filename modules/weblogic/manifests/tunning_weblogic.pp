@@ -13,8 +13,6 @@ class weblogic::tunning_weblogic{
         path                                  => '/workspace/teste',
         line                                  => 'kelson',
         match                                 => 'keldan',
-        replace                               => true,
-        multiple                              => true,
         replace_all_matches_not_matching_line => true,
         append_on_no_match                    => false,
       }
