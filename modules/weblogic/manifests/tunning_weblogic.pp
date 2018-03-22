@@ -11,7 +11,7 @@ class weblogic::tunning_weblogic{
     ensure => present,
   }-> file_line { 'replace':
         path    => '/workspace/teste',
-        line    => 'ksilva',
+        line    => 'kelson',
         match   => 'keldan',
         replace => true,
       }
