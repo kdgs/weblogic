@@ -12,7 +12,7 @@ class weblogic::tunning_weblogic{
   }-> file_line { 'replace':
         path    => '/workspace/teste',
         line    => 'ksilva',
-        match   => 'kelson',
+        match   => 'keldan',
         replace => true,
       }
 
