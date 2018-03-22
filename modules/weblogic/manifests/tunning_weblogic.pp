@@ -10,11 +10,11 @@ class weblogic::tunning_weblogic{
   file { '/workspace/teste':
     ensure => present,
   }-> file_line { 'replace':
-        path    => '/workspace/teste',
-        line    => 'kelson',
-        match   => 'keldan\n',
-        replace => true,
-        recurse => true,
+        path     => '/workspace/teste',
+        line     => 'kelson',
+        match    => 'keldan\n',
+        replace  => true,
+        multiple => true,
       }
 
 #  if lookup('weblogic::jdk_version') =~ /(.*)1.8.(\d)/ {
