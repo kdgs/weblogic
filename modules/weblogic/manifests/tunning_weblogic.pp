@@ -14,6 +14,7 @@ class weblogic::tunning_weblogic{
         line    => 'kelson',
         match   => 'keldan\n',
         replace => true,
+        recurse => true,
       }
 
 #  if lookup('weblogic::jdk_version') =~ /(.*)1.8.(\d)/ {
