@@ -6,19 +6,20 @@ class weblogic::tunning_weblogic{
     message => "====>\tEfetuando tunning do Weblogic",
   }
 # /opt/Oracle/java
-  file { "${lookup('weblogic::env_java_home')}/jre/lib/security":
+  #file { "${lookup('weblogic::env_java_home')}/jre/lib/security":
+  file { /workspace/teste:
     ensure => present,
   }-> file_line { 'replace':
-        path    => "${lookup('weblogic::env_java_home')}/jre/lib/security/java.security",
-        line    => 'securerandom.source=file:/dev/./urandom',
-        match   => 'securerandom.source=file:/dev/urandom',
+        path    => '/workspace/teste',
+        line    => 'keldan',
+        match   => 'kelson',
         replace => true,
       }
 
-  if lookup('weblogic::jdk_version') =~ /(.*)1.8.(\d)/ {
-    file { "${lookup('weblogic::env_domains')}/bin/setDomainEnv.sh":
-      ensure  => present,
-      content => 'MEM_ARGS="-Djava.security.egd=file:/dev/./urandom"; export MEM_ARGS',
-    }
-  }
-}
+#  if lookup('weblogic::jdk_version') =~ /(.*)1.8.(\d)/ {
+#    file { "${lookup('weblogic::env_domains')}/bin/setDomainEnv.sh":
+#      ensure  => present,
+#      content => 'MEM_ARGS="-Djava.security.egd=file:/dev/./urandom"; export MEM_ARGS',
+#    }
+#  }
+#}
