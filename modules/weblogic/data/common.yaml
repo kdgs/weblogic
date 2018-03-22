@@ -1,0 +1,41 @@
+# weblogic/data/common.yaml
+---
+#========================================================#
+#Variaveis: base_users_oracle.pp                         #
+#========================================================#
+weblogic::base_user_oracle_group: 'oinstall'
+weblogic::base_user_oracle_user:  'oracle'
+weblogic::base_user_oracle_gid:   '610'
+weblogic::base_oracle_root_path:  "/opt/Oracle"
+
+#========================================================#
+#Variaveis: base_users_oracleweblogic.pp                 #
+#========================================================#
+weblogic::base_user_weblogic_group:    'weblogic'
+weblogic::base_user_weblogic_user:     'weblogic'
+weblogic::base_user_weblogic_user_adm: 'wladmin'
+weblogic::base_user_weblogic_gid:      '620'
+
+#========================================================#
+#Variaveis: install_env_vars.pp                          #
+#========================================================#
+weblogic::env_java_home:  "/opt/Oracle/java"
+weblogic::env_mw:         "/opt/Oracle/Middleware"
+weblogic::env_mw_version: "1212"
+weblogic::env_wl_log:     "/var/log/wl/"
+weblogic::env_domains:    "/var/weblogic/domains/"
+
+#        --- Não alterar a variável env_shell ---        #
+weblogic::env_shell:      "if [ -f /etc/bashrc ]; then\n. /etc/bashrc\nfi\n"
+
+#========================================================#
+#Variaveis: install_java.pp                              #
+#========================================================#
+weblogic::temp_dir:       "/tmp/"
+weblogic::jdk_zip_file:   "server-jre-8u161-linux-x64.tar.gz"
+weblogic::jdk_src_link:   "http://gesitrepo.servicos.bb.com.br/java/java8/server-jre-8u161-linux-x64.tar.gz"
+weblogic::jdk_version:    "jdk1.8.0_161"
+
+#========================================================#
+#Variaveis: install_node_manager_svc.pp                  #
+#========================================================#

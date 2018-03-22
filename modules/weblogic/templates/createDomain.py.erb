@@ -1,0 +1,29 @@
+#==============================================================================================================#
+#                         Parametros definidos no arquivo weblogic/data/common.yaml                            #
+#==============================================================================================================#
+WLHOME=<%=@script_wlhome%>
+readTemplate(WLHOME+'/wlserver/common/templates/wls/wls.jar')
+
+cd('Servers/AdminServer')
+set('Name',"AdminServer")
+
+domainName=<%=@script_domain_name%>
+domainPath=<%=@script_domain_path%>
+AdminListenAdr=<%=@script_listen_adr%>
+AdminListenPort=<%=@script_listen_port%>
+
+set('ListenAddress',AdminListenAdr)
+set('ListenPort', AdminListenPort)
+
+cd('/')
+cd('Security/base_domain/User/weblogic')
+usr=<%=@script_user%>
+set('Name',usr)
+AdminPassword=<%=@script_pwd%>
+cmo.setPassword(AdminPassword)
+
+setOption('OverwriteDomain', 'true')
+writeDomain(domainPath+"/"+domainName)
+
+closeTemplate()
+exit()
