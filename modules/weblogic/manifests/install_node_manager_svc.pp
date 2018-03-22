@@ -8,7 +8,7 @@ class weblogic::install_node_manager_svc {
   #chmod +x /etc/init.d/startNodeDaemon
   #file { '/etc/init.d/startNodeManagerDaemon.sh':
   file { '/workspace/teste.sh':
-    source  => 'puppet:///modules/startNodeManagerDaemon.sh',
+    source  => 'puppet:///modules/archive/startNodeManagerDaemon.sh',
     replace => false,
     mode    => '0111',
   }
