@@ -7,7 +7,7 @@ class weblogic::tunning_weblogic{
   }
 # /opt/Oracle/java
   #file { "${lookup('weblogic::env_java_home')}/jre/lib/security":
-  file { ''/workspace/teste':
+  file { '/workspace/teste':
     ensure => present,
   }-> file_line { 'replace':
         path    => '/workspace/teste',
