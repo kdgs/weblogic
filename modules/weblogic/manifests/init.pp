@@ -7,5 +7,6 @@ class weblogic {
   #include weblogic::base_users_weblogic
   #include weblogic::install_env_vars
   #include weblogic::install_java
-  include weblogic::tunning_weblogic
+  #include weblogic::tunning_weblogic
+  include weblogic::install_node_manager_svc
 }
